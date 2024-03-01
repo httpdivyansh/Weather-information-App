@@ -1,0 +1,233 @@
+*::before,*::after,*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Merriweather Sans;
+    overflow-y: hidden;
+    
+}
+:root{
+    --colorDark1:#112D4E;
+    --colorDark2:#3F72AF;
+    --colorDark3:#DBE2EF;
+    --colorDark4:#F9F7F7;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    color: var(--colorDark3);
+    background-image: linear-gradient(160deg,#112d4e 0%, #3f72af 100%);
+}
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    padding-top:20px ;
+}
+.tab-container{
+    width: 90%;
+    max-width: 550px;
+    display: flex;
+    justify-content: space-between ;
+    max-width: 550px;
+    margin: 0 auto;
+    margin-top: 4rem ;
+} 
+ .tab{
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding: 5px 8px;
+    letter-spacing: 1.75px;
+ }
+
+.tab.current-tab{
+    border-radius: 4px;
+    background-color: rgba(219, 226, 239,0.5);
+}
+
+.weather-container{
+  margin-block: 4rem;
+}
+
+.btn{
+    all: unset;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color:  var(--colorDark2);
+    cursor: pointer;
+    padding: 10px 30px;
+}
+
+.sub-container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+.grant-location-container{
+     display:none ; 
+}
+.grant-location-container.active{
+    display: flex;
+}
+
+.grant-location-container>img{
+    margin-bottom: 2rem;
+    height: 80px;
+    width:auto;
+}
+.grant-location-container p:first-of-type{
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.grant-location-container p:last-of-type{
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.75px;
+}
+.loading-container{
+    display: none;
+}
+
+.loading-container.active{
+    display: flex;
+}
+
+.loading-container p {
+    text-transform: uppercase;
+}
+.loading-container img{
+    height: 80px;
+    width: auto;
+}
+
+
+.user-info-container{
+    display: none;
+}
+.user-info-container.active{
+    display: flex;
+}
+.name{
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+    margin-bottom: 1rem;
+}
+
+
+.user-info-container p{
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+
+
+.user-info-container.img{
+    width: 90px;
+    height: auto;
+}
+
+.name p{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.name img{
+    width: 30px;
+    height: auto;
+    object-fit: contain;
+    
+}
+.user-info-container p[data-temp]{
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+
+.parameter-container{
+    display: flex;
+    gap: 10px 20px;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.parameter{
+    width: 8rem;
+    max-width: 200px;
+     background-color: rgba(219, 226, 239,0.5);
+     align-items: center;
+     border-radius: 5px;
+     padding: 1rem;
+     display: flex;
+     flex-direction: column;
+     overflow-x: hidden;
+     gap: 5px 0;
+     align-items: center;
+     
+}
+
+.parameter p{
+    overflow-x: hidden;
+}
+
+.parameter img{
+    width: 50px;
+    height: auto;
+}
+.parameter p:first-of-type{
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.parameter p:last-of-type{
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+.form-container{
+    display: none; 
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px;
+    margin-bottom: 3rem;
+}
+
+.form-container.active{
+    display: flex;
+}
+
+.form-container input{
+    all: unset;
+    width: calc(100% - 80px);
+    height: 40px;
+    padding: 0 20px;
+    background-color: rgba(219, 226, 239,0.5) ;
+    border-radius: 10px;
+}
+.form-container input::placeholder{
+    color: var(--colorDark3);
+}
+.form-container input:focus{
+    outline: var(--colorDark4);
+
+}
+
+.form-container .btn{
+    padding: unset;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 1px;
+}
